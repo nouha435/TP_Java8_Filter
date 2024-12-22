@@ -16,14 +16,14 @@ public class TestPersonWithoutAndWithIterator {
         }
 
         @Test
-        public void testRemovehamzaUsingIterator() {
+        public void testRemoveHamzaUsingIterator() {
                 Set<Person> people = new HashSet<>();
                 people.add(Person.builder().firstName("radia").familyName("alaa").build());
                 people.add(Person.builder().firstName("zahra").familyName("Chama").build());
 
-                Set<Person> peopleWithoutBob = PersonService.removeHamzaUsingIterator();
+                Set<Person> peopleWithoutHamza = PersonService.removeHamzaUsingIterator();
 
-                assertThat(peopleWithoutBob).containsExactlyInAnyOrderElementsOf(people);
+                assertThat(peopleWithoutHamza).containsExactlyInAnyOrderElementsOf(people);
         }
 
 }
